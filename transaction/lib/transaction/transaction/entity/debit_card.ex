@@ -1,13 +1,13 @@
-defmodule Transaction.Transaction.Entity.Card do
+defmodule Transaction.Transaction.Entity.DebitCard do
   use Ecto.Schema
   import Ecto.Changeset
 
-  schema "card" do
-    field :brand, :string
-    field :number, :integer
-    field :cvv, :integer
-    field :name, :string
-    field :expiration_date, :string
+  schema "debit_card" do
+    field(:brand, :string)
+    field(:number, :integer)
+    field(:cvv, :integer)
+    field(:name, :string)
+    field(:expiration_date, :string)
 
     timestamp(type: :utc_datetime)
   end
